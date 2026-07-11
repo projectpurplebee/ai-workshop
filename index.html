@@ -105,8 +105,9 @@
             <p>프로그램 운영과 참여에 관한 문의를 남겨 주세요.</p>
           </div>
           <form class="contact__form" action="https://formsubmit.co/blackpolly@naver.com" method="POST">
-            <input type="hidden" name="_subject" value="프로젝트 퍼플비 AI 교육 프로그램 문의" />
+            <input type="hidden" name="_subject" value="AI 강의 문의" />
             <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://projectpurplebee.github.io/ai-workshop/" />
             <input class="contact__honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <label>
               <span>이름</span>
@@ -131,5 +132,13 @@
         </div>
       </footer>
     </main>
+    <script>
+      document.querySelector('.contact__form')?.addEventListener('submit', function () {
+        const name = this.elements.name.value.trim();
+        const message = this.elements.message.value.trim();
+        const firstSentence = (message.match(/^[\s\S]*?(?:[.!?。！？]|$)/) || [''])[0].trim();
+        this.elements._subject.value = `[AI 강의 문의] ${name}: ${firstSentence}`.trim().slice(0, 180);
+      });
+    </script>
   </body>
 </html>
