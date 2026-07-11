@@ -104,18 +104,20 @@
             <h2 id="contact-title">교육 문의</h2>
             <p>프로그램 운영과 참여에 관한 문의를 남겨 주세요.</p>
           </div>
-          <form class="contact__form" action="https://formsubmit.co/blackpolly@naver.com" method="POST">
+          <form class="contact__form" action="https://formsubmit.co/61634de4a70460a7af72d94c9ca63900" method="POST">
             <input type="hidden" name="_subject" value="AI 강의 문의" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://projectpurplebee.github.io/ai-workshop/" />
+            <input type="hidden" name="_url" value="https://projectpurplebee.github.io/ai-workshop/" />
+            <input type="hidden" name="email" id="contact-email" />
             <input class="contact__honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <label>
               <span>이름</span>
               <input type="text" name="name" autocomplete="name" required />
             </label>
             <label>
-              <span>회신받을 이메일</span>
-              <input type="email" name="email" autocomplete="email" required />
+              <span>회신받을 연락처 (이메일 또는 전화번호)</span>
+              <input type="text" name="contact" autocomplete="email tel" required />
             </label>
             <label>
               <span>문의 내용</span>
@@ -135,8 +137,10 @@
     <script>
       document.querySelector('.contact__form')?.addEventListener('submit', function () {
         const name = this.elements.name.value.trim();
+        const contact = this.elements.contact.value.trim();
         const message = this.elements.message.value.trim();
         const firstSentence = (message.match(/^[\s\S]*?(?:[.!?。！？]|$)/) || [''])[0].trim();
+        this.elements.email.value = contact.includes('@') ? contact : '';
         this.elements._subject.value = `[AI 강의 문의] ${name}: ${firstSentence}`.trim().slice(0, 180);
       });
     </script>
