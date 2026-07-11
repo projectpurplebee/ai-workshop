@@ -6,7 +6,7 @@ body { margin:0; color:var(--ink); background:var(--paper); font-family:"Noto Sa
 .wrap { width:min(100% - 40px, 1040px); margin:0 auto; }
 .hero { background:var(--plum); color:#fff; overflow:hidden; }
 .hero__inner { min-height:430px; padding:28px 0 42px; }
-.logo { display:block; width:154px; height:auto; object-fit:contain; object-position:left center; margin-bottom:60px; }
+.logo { display:block; width:156px; height:auto; object-fit:contain; object-position:left center; margin-bottom:30px; }
 .eyebrow,.section-label { margin:0 0 10px; font-family:"DM Sans",sans-serif; font-size:11px; letter-spacing:.12em; font-weight:700; }
 .eyebrow { color:var(--yellow); font-size:22px; letter-spacing:-.04em; }
 h1,h2,h3,p { margin-top:0; }
@@ -61,7 +61,7 @@ footer { background:var(--ink); color:#fff; }
 @media (min-width:720px) {
   .wrap { width:min(100% - 96px, 1040px); }
   .hero__inner { min-height:505px; padding:38px 0 58px; }
-  .logo { width:188px; margin-bottom:84px; }
+  .logo { width:156px; margin-bottom:42px; }
   .hero__lead { font-size:17px; }
   .intro { padding:104px 0; display:grid; grid-template-columns:1fr 1.2fr; column-gap:80px; }
   .intro .section-label { grid-column:1; grid-row:1; }
