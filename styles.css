@@ -50,6 +50,7 @@ time { flex:none; color:var(--plum); font-size:12px; font-weight:700; }
 .contact__form label { display:grid; gap:6px; font-size:12px; font-weight:700; }
 .contact__form input,.contact__form textarea { width:100%; border:1px solid var(--ink); border-radius:0; padding:10px 12px; background:var(--paper); color:var(--ink); font:400 14px/1.5 "Noto Sans KR",sans-serif; }
 .contact__form textarea { resize:vertical; }
+.contact__form textarea::placeholder { color:#7a737d; opacity:1; }
 .contact__form button { justify-self:start; min-height:48px; padding:0 22px; border:0; border-radius:0; background:var(--ink); color:#fff; font:700 14px "Noto Sans KR",sans-serif; cursor:pointer; }
 .contact__form button:hover,.contact__form button:focus-visible { background:var(--plum); }
 .contact__honeypot { position:absolute; left:-9999px; }
