@@ -136,7 +136,7 @@
     <script>
       document.querySelector('.contact__form')?.addEventListener('submit', function () {
         const name = this.elements.name.value.trim();
-        const contactField = this.elements['e-mail 또는 휴대폰'];
+        const contactField = this.elements['이메일/휴대폰'];
         const contact = contactField.value.trim();
         const message = this.elements.message.value.trim();
         const firstSentence = (message.match(/^[\s\S]*?(?:[.!?。！？]|$)/) || [''])[0].trim();
