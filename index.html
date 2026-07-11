@@ -141,7 +141,6 @@
         const contact = contactField.value.trim();
         const message = this.elements.message.value.trim();
         const firstSentence = (message.match(/^[\s\S]*?(?:[.!?。！？]|$)/) || [''])[0].trim();
-        contactField.name = contact.includes('@') ? 'email' : '이메일/휴대폰';
         this.elements._subject.value = `[AI 강의 문의] ${name}: ${firstSentence.slice(0, 50)}`.trim();
       });
     </script>
